@@ -365,15 +365,15 @@
       "Value":  { "Fn::Join": [ "", [ "http://", { "Fn::GetAtt": ["ManagementServer", "PublicIp"]} ]]}
     },
     "RedmineURL": {
-      "Description": "URL of the CI and CD Management Server Redmine Service",
+      "Description": "URL of Redmine Service",
       "Value":  { "Fn::Join": [ "", [ "http://", { "Fn::GetAtt": ["ManagementServer", "PublicIp"]}, "/redmine" ]]}
     },
     "JenkinsURL": {
-      "Description": "URL of the CI and CD Management Server Jenkins Service",
+      "Description": "URL of Jenkins Service",
       "Value":  { "Fn::Join": [ "", [ "http://", { "Fn::GetAtt": ["ManagementServer", "PublicIp"]}, "/jenkins" ]]}
     },
     "SubversionURL": {
-      "Description": "URL of the CI and CD Management Server Subversion Service",
+      "Description": "URL of Subversion Service",
       "Value":  { "Fn::Join": [ "", [ "http://", { "Fn::GetAtt": ["ManagementServer", "PublicIp"]}, "/subversion" ]]}
     }
   }
