@@ -456,7 +456,7 @@ chmod g+rx /var/log/cron
 #/usr/lib64/fluent/ruby/bin/fluent-gem update
 /usr/lib64/fluent/ruby/bin/fluent-gem update fluent-plugin-mongo >> ${LOGFILE}
 /usr/lib64/fluent/ruby/bin/fluent-gem install fluent-plugin-forest >> ${LOGFILE}
-#/usr/lib64/fluent/ruby/bin/fluent-gem install fluent-plugin-config-expander >> ${LOGFILE}
+/usr/lib64/fluent/ruby/bin/fluent-gem install fluent-plugin-config-expander >> ${LOGFILE}
 
 yum install -y libcurl libcurl-devel >> ${LOGFILE}
 /usr/lib64/fluent/ruby/bin/fluent-gem install fluent-plugin-elasticsearch >> ${LOGFILE}
