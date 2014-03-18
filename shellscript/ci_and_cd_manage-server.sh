@@ -456,8 +456,11 @@ chmod g+rx /var/log/cron
 #/usr/lib64/fluent/ruby/bin/fluent-gem update
 /usr/lib64/fluent/ruby/bin/fluent-gem update fluent-plugin-mongo >> ${LOGFILE}
 /usr/lib64/fluent/ruby/bin/fluent-gem install fluent-plugin-forest >> ${LOGFILE}
-/usr/lib64/fluent/ruby/bin/fluent-gem install fluent-plugin-config-expander >> ${LOGFILE}
+#/usr/lib64/fluent/ruby/bin/fluent-gem install fluent-plugin-config-expander >> ${LOGFILE}
+
+yum install -y libcurl libcurl-devel >> ${LOGFILE}
 /usr/lib64/fluent/ruby/bin/fluent-gem install fluent-plugin-elasticsearch >> ${LOGFILE}
+
 /usr/lib64/fluent/ruby/bin/fluent-gem install fluent-plugin-elb-log >> ${LOGFILE}
 
 yum install -y GeoIP GeoIP-devel >> ${LOGFILE}
@@ -842,6 +845,7 @@ echo cloud-init RHEL Ruby Gems Settings Start `date` >> ${LOGFILE}
 
 cd /var/lib/redmine/
 /usr/bin/bundle install --without development test >> ${LOGFILE}
+
 /usr/bin/bundle exec rake generate_secret_token >> ${LOGFILE}
 RAILS_ENV=production /usr/bin/bundle exec rake db:migrate >> ${LOGFILE}
 RAILS_ENV=production /usr/bin/bundle exec rake redmine:load_default_data REDMINE_LANG=ja >> ${LOGFILE}
@@ -903,10 +907,6 @@ __EOF__
 /sbin/service httpd restart >> ${LOGFILE}
 
 echo cloud-init RHEL Redmine+Passenger Settings Complete `date` >> ${LOGFILE}
-
-
-
-
 
 
 
