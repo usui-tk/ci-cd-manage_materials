@@ -27,7 +27,7 @@ sed -i 's/Listen = 127.0.0.1/Listen = 0.0.0.0/g' /etc/ngircd.conf
 sed -i 's/;MaxNickLength = 9/MaxNickLength = 16/g' /etc/ngircd.conf
 sed -i 's/;Name = #TheName/Name = DevOps/g' /etc/ngircd.conf
 sed -i 's/;Topic = a great topic/Topic = CI and CD/g' /etc/ngircd.conf
-sed -i 's/;Modes = tn/Modes = tn/g' /etc/ngircd.conf
+sed -i 's/;Modes = tnk/Modes = tn/g' /etc/ngircd.conf
 /usr/sbin/ngircd --configtest << __EOF__ >> ${LOGFILE}
 
 __EOF__
