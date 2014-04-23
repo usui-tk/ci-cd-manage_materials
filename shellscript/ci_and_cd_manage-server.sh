@@ -742,7 +742,7 @@ echo cloud-init RHEL MySQL-Oracle v5.6.x Settings Complete `date` >> ${LOGFILE}
 
 echo cloud-init RHEL Ruby v2.0.x Install Start `date` >> ${LOGFILE}
 
-yum localinstall -y http://rpm-repository.s3.amazonaws.com/ruby/ruby-2.0.0.451-1.el6.x86_64.rpm >> ${LOGFILE}
+yum localinstall -y https://raw.githubusercontent.com/usui-tk/rhel-rpm/master/ruby-v2.1-rpm/ruby-2.1.1.76-1.el6.x86_64.rpm >> ${LOGFILE}
 
 echo cloud-init RHEL Ruby v2.0.x Install Complete `date` >> ${LOGFILE}
 
